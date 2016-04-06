@@ -17,9 +17,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('notes', function() {
+Route::get('notes', function () {
 
     $notes = Note::all();
 
     return view('notes', compact('notes'));
 });
+
+Route::get('notes/create', function () {
+    return '[Create Notes]';
+});
+
+// Restringir nota en la ruta a solo numeros
+// slug es un parametro opcional
+Route::get('notes/{note}/{slug?}', function ($note, $slug = null) {
+    dd($note, $slug);
+})->where('note', '[0-9]+');
