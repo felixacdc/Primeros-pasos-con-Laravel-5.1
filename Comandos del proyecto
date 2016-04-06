@@ -1,0 +1,4 @@
+*** ejecutar las pruebas:
+vendor/bin/phpunit
+*** acceder a la consola de laravel tinker
+php artisan tinker
