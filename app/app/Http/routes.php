@@ -28,7 +28,7 @@ Route::post('notes', function () {
     return 'Creating a note';
 });
 
-Route::get('notes/create', function () {
+Route::get('note/create', function () {
     return view('notes/create');
 });
 

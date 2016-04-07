@@ -13,6 +13,12 @@
     <title>Starter Template for Bootstrap</title>
 
     {!!Html::style('css/bootstrap.min.css')!!}
+
+    <style media="screen">
+        body{
+            margin-top: 60px;
+        }
+    </style>
   </head>
 
   <body>
