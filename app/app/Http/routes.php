@@ -17,23 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('notes', function () {
+Route::get('notes', 'NotesController@index');
 
-    $notes = Note::all();
+Route::post('notes', 'NotesController@store');
+Route::get('note/create', 'NotesController@create');
 
-    return view('notes/list', compact('notes'));
-});
-
-Route::post('notes', function () {
-    return 'Creating a note';
-});
-
-Route::get('note/create', function () {
-    return view('notes/create');
-});
+Route::get('notes/{note}', 'NotesController@show')->where('note', '[0-9]+');
 
 // Restringir nota en la ruta a solo numeros
 // slug es un parametro opcional
-Route::get('notes/{note}/{slug?}', function ($note, $slug = null) {
-    dd($note, $slug);
-})->where('note', '[0-9]+');
+// Route::get('notes/{note}/{slug?}', function ($note, $slug = null) {
+//     dd($note, $slug);
+// })->where('note', '[0-9]+');
