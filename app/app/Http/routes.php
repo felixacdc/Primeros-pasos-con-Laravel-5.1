@@ -24,6 +24,10 @@ Route::get('notes', function () {
     return view('notes', compact('notes'));
 });
 
+Route::post('notes', function () {
+    return 'Creating a note';
+});
+
 Route::get('notes/create', function () {
     return '[Create Notes]';
 });

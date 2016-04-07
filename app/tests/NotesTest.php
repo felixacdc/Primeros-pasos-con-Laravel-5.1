@@ -8,6 +8,8 @@ use App\Note;
 
 class NotesTest extends TestCase
 {
+    // desactivar middleware;
+    use WithoutMiddleware;
     /**
      * A basic test example.
      *
@@ -27,5 +29,14 @@ class NotesTest extends TestCase
             # Then
             ->see('My first note')
             ->see('Second note');
+    }
+
+    public function test_create_note()
+    {
+        // $this->post('notes') es equivalente a Route::post('notes')
+        // When
+        $this->post('notes')
+            // Then
+            ->see('Creating a note');
     }
 }
