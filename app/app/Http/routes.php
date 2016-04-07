@@ -21,7 +21,7 @@ Route::get('notes', function () {
 
     $notes = Note::all();
 
-    return view('notes', compact('notes'));
+    return view('notes/list', compact('notes'));
 });
 
 Route::post('notes', function () {
@@ -29,7 +29,7 @@ Route::post('notes', function () {
 });
 
 Route::get('notes/create', function () {
-    return '[Create Notes]';
+    return view('notes/create');
 });
 
 // Restringir nota en la ruta a solo numeros
