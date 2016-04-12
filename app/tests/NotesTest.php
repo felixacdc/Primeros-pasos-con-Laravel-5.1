@@ -9,7 +9,9 @@ use App\Note;
 class NotesTest extends TestCase
 {
     // desactivar middleware;
-    use WithoutMiddleware;
+    // use WithoutMiddleware;
+    # evita que se guarden datos en la base de datos
+    use DatabaseTransactions;
     /**
      * A basic test example.
      *
