@@ -22,4 +22,4 @@ Con este curso aprenderás sobre los conceptos más importantes del framework m�
 
 Este curso fue desarrollado en [styde](https://styde.net) <br><br>
 
-- [x] Curso Finalizar
+- [x] Curso Finalizado
