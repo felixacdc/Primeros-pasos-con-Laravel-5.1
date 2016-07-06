@@ -13,7 +13,11 @@
                     @else
                         {{ $note->note }}
                     @endif --}}
-                    <span class="label label-info">{{ $note->category->name }}:</span> 
+                    @if( $note->category )
+                        <span class="label label-info">{{ $note->category->name }}:</span>
+                    @else
+                        <span class="label label-info">It does not have category</span> 
+                    @endif
                     {{ $note->note }}
                 </li>
             @endforeach
