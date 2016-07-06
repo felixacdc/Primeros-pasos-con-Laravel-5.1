@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
+        $this->call(CategoryTableSeeder::class);
         // NoteTableSeeder::class se utiliza para incluir al namespace de la clase
         $this->call(NoteTableSeeder::class);
 
