@@ -16,9 +16,10 @@
                     @if( $note->category )
                         <span class="label label-info">{{ $note->category->name }}:</span>
                     @else
-                        <span class="label label-info">It does not have category</span> 
+                        <span class="label label-info">It does not have category</span>
                     @endif
-                    {{ $note->note }}
+                    {{ substr($note->note, 0, 100) }}...
+                    <a href="{{ url('notes/' . $note->id) }}">View note</a>
                 </li>
             @endforeach
         </ul>

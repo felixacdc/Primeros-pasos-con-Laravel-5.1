@@ -66,7 +66,8 @@ class NotesController extends Controller
      */
     public function show($note)
     {
-        dd($note);
+        $note = Note::findOrFail($note);
+        return view('notes/details')->with('note', $note);
     }
 
     /**

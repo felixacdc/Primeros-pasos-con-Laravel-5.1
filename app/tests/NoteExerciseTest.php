@@ -8,7 +8,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class NoteExerciseTest extends TestCase
 {
-    use DatabaseTransactions;
+    // use DatabaseTransactions;
     /**
      * A basic test example.
      *
@@ -31,7 +31,9 @@ class NoteExerciseTest extends TestCase
                 ->dontsee('End of the note')
                 ->seeLink('View note')
                 ->click('View note')
-                ->see($text);
+                ->see($text)
+                // Verificar que existe un link con un texto y con un link determinado
+                ->seeLink('View all notes', 'notes');
 
     }
 }
