@@ -20,5 +20,7 @@ Con este curso aprenderás sobre los conceptos más importantes del framework m�
 13. Ejercicio: detalle de notas
 14. Solución: detalle de notas
 
-Este curso fue desarrollado en [styde](https://styde.net)
+Este curso fue desarrollado en [styde](https://styde.net) <br><br>
+
+- [x] Curso Sin Finalizar
 
